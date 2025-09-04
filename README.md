@@ -1,0 +1,2 @@
+# keep-selected-window-always-on-top-multi-python
+Cross-platform CLI utilities to keep selected windows always on top or clear the flag. Lists visible top-level windows, supports multi-select (indices, ranges, *), optional focus control, safe clear-all with confirm, auto-cleanup unless --persist. Windows (SetWindowPos) and Linux/X11 (wmctrl); macOS lists only. Python 3.10+; psutil optional. Ready.
