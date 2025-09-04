@@ -1,6 +1,6 @@
 # keep-selected-window-always-on-top-multi-python
 
-CLI to set/clear Always‑on‑Top for selected windows (Windows & X11). Multi‑select windows by index/range, optional focus control, safe "clear all" with confirmation, and automatic cleanup unless persisted.
+Cross-platform CLI utilities to keep selected windows always on top or clear the flag. Lists visible top-level windows, supports multi-select (indices, ranges, *), optional focus control, safe clear-all with confirm, auto-cleanup unless --persist. Windows (SetWindowPos) and Linux/X11 (wmctrl); macOS lists only. Python 3.10+; psutil optional. Ready.
 
 Repository: https://github.com/ixtomcoder/keep-selected-window-always-on-top-multi-python
 
@@ -8,6 +8,7 @@ This repository contains the main CLI scripts (English versions are the primary 
 
 - `always_on_top.py` — Multi-select utility to set selected windows to "Always on Top" (Windows / X11).
 - `clear_topmost.py` — Windows-only utility to remove the "Always on Top" flag from windows (interactive or filtered by title / all).
+
 
 ---
 
@@ -183,7 +184,7 @@ Notes:
 
 - "wmctrl not found" (Linux)
   - Install wmctrl via your package manager (e.g., `sudo apt install wmctrl`).
-  - Confirm you are running an X11 session (not Wayland). Check `XDG_SESSION_TYPE` environment variable.
+  - Confirm you are running an X11 session (not Wayland). Check `XDG_SESSION_TYPE` (should be `x11` for reliable behavior).
 - "SetWindowPos failed ... Code 5" (Windows)
   - Means access denied; target window probably runs elevated. Run this script with Administrator privileges.
 - No windows listed / titles missing
